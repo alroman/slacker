@@ -28,6 +28,7 @@ request = https.get url, (response) ->
         # console.log JSON.stringify converted.features, null, 2
         list = converted.features
         rand_location = list[Math.floor(Math.random() * list.length)]
+        console.log rand_location
 
         # Print name
         console.log rand_location.properties.name
@@ -43,7 +44,7 @@ request = https.get url, (response) ->
             { latitude: b, longitude: a }
         )
 
-        console.log "Approximately " distance * 0.000621371 + " miles away from office..."
+        console.log "Approximately " + distance * 0.000621371 + " miles away from office..."
 
     )
 
